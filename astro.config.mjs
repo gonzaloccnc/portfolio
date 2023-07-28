@@ -6,7 +6,7 @@ import tailwind from '@astrojs/tailwind'
 export default defineConfig({
 	integrations: [tailwind()],
 	site: 'https://gonzaloccnc.github.io',
-	base: '/Portfolio/',
+	base: '/portfolio/',
 	build: {
 		assets: "assets"
 	},
