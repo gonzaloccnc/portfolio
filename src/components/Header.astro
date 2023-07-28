@@ -1,0 +1,106 @@
+---
+import Sun from '@components/icons/Sun.astro'
+import Link from './Link.astro'
+import Burger from './icons/Burger.astro'
+import Close from './icons/Close.astro'
+import Logo from './icons/Logo.astro'
+
+const links: { text: string; link: string }[] = [
+	{
+		text: 'Inicio',
+		link: '#home'
+	},
+	{
+		text: 'Sobre mi',
+		link: '#about'
+	},
+	{
+		text: 'Proyectos',
+		link: '#projects'
+	}
+]
+---
+
+<header
+	class='mobile:hidden desktop-sm:px-32 desktop:px-14 desktop:flex items-center justify-between fixed w-full left-0 top-0 z-50 bg-[#1d0c34] py-3'
+>
+	<a href='#' class='text-xl cursor-pointer flex items-center'><Logo /> GM.</a>
+	<nav>
+		<ul class='flex text-md gap-8 items-center links'>
+			{links.map((x) => <Link text={x.text} link={x.link} />)}
+			<li class='cursor-pointer'>
+				<Sun />
+			</li>
+		</ul>
+	</nav>
+</header>
+
+<header
+	class='mobile:flex desktop:hidden items-center justify-between fixed w-full left-0 top-0 z-50 bg-[#1d0c34] py-3 px-4 tablet:px-12'
+>
+	<a href='#' class='text-xl cursor-pointer'>GM.</a>
+	<div class='flex gap-2 items-center'>
+		<button id='burger'>
+			<Burger />
+		</button>
+	</div>
+
+	<div
+		class='absolute top-0 left-full w-full h-screen bg-dark transition-all ease-in duration-300'
+		id='nav_mobile'
+	>
+		<div class='absolute top-5 right-5' id='close'>
+			<Close />
+		</div>
+		<nav class='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full'>
+			<ul class='flex text-md gap-8 flex-col justify-center items-center links' '>
+				{links.map((x) => <Link text={x.text} link={x.link} />)}
+				<li class='cursor-pointer'>
+					<Sun />
+				</li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<script>
+	const button = document.querySelector('#burger') as HTMLButtonElement
+	const nav = document.querySelector('#nav_mobile') as HTMLDivElement
+	const close = document.querySelector('#close') as HTMLDivElement
+
+	close.addEventListener('click', () => {
+		setTimeout(() => {
+			nav.classList.remove('left-0')
+			nav.classList.add('left-full')
+		}, 300)
+	})
+
+	button.addEventListener('click', () => {
+		setTimeout(() => {
+			nav.classList.remove('left-full')
+			nav.classList.add('left-0')
+		}, 300)
+	})
+</script>
+
+<script>
+	const nav = document.querySelector('#nav_mobile') as HTMLDivElement
+	const links = document.querySelectorAll('.links a') as NodeListOf<HTMLAnchorElement>
+
+	links.forEach((x) => {
+		x.addEventListener('click', (e) => {
+			e.preventDefault()
+
+			const current = e.currentTarget as HTMLAnchorElement
+			const target = document.querySelector(current.getAttribute('href') ?? '#') as HTMLElement
+			const goTo = current.getAttribute('href') === '#home' ? 0 : target.offsetTop - 60
+
+			window.scrollTo(0, goTo)
+
+			setTimeout(() => {
+				nav.classList.remove('left-0')
+				nav.classList.add('left-full')
+			}, 300)
+		})
+	})
+</script>

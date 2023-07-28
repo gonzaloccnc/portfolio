@@ -1,0 +1,20 @@
+---
+
+---
+
+<div
+	class='desktop:w-full desktop:flex desktop:max-w-none desktop:mx-0 desktop:justify-evenly mobile:mx-auto mobile:max-w-sm tablet:grid-cols-3 mobile:grid mobile:grid-cols-2 items-center gap-5 py-5 my-10 rounded-xl backdrop-blur-2xl shadow-[0px_0px_16px_0px_rgba(0,0,0,0.5)] bg-lightgray gradient-custom'
+>
+	<slot />
+</div>
+
+<style>
+	.gradient-custom {
+		background-image: radial-gradient(
+			151.92% 127.02% at 15.32% 21.04%,
+			rgba(105, 59, 147, 0.2),
+			rgba(110, 191, 244, 0.04) 50%,
+			rgba(70, 144, 212, 0) 100%
+		);
+	}
+</style>

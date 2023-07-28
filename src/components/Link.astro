@@ -1,0 +1,16 @@
+---
+interface Props {
+	text: string
+	link: string
+}
+
+const { text, link } = Astro.props
+---
+
+<!--  -->
+<a
+	href={link}
+	class='cursor-pointer hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-r hover:from-h-primary hover:from-0% hover:via-h-seconday hover:via-54.94% hover:to-h-third hover:to-100% transition-all ease-in duration-500'
+>
+	{text}
+</a>

@@ -1,0 +1,27 @@
+---
+import { projects } from '@utils/projects'
+import ProjectCard from './ProjectCard.astro'
+
+interface Props {}
+---
+
+<section class='mt-20 border-t border-extra pt-12' id='projects'>
+	<h1 class='uppercase text-md'>Proyectos</h1>
+
+	<div
+		class='grid desktop:grid-cols-3 tablet:grid-cols-2 mobile:grid-cols-1 gap-x-8 gap-y-16 mt-10'
+	>
+		{
+			projects.map((x) => (
+				<ProjectCard
+					title={x.title}
+					description={x.des}
+					website={x.web}
+					github={x.github}
+					image={x.img}
+					technologies={x.technologies}
+				/>
+			))
+		}
+	</div>
+</section>

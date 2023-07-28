@@ -1,0 +1,41 @@
+{
+	"extends": "astro/tsconfigs/strict",
+	"compilerOptions": {
+		"target": "ESNext",
+		"module": "ESNext",
+		"moduleResolution": "Node",
+		"useDefineForClassFields": true,
+		"lib": [
+			"DOM",
+			"DOM.Iterable",
+			"ESNext"
+		],
+		"importsNotUsedAsValues": "remove",
+		"allowJs": true,
+		"skipLibCheck": true,
+		"esModuleInterop": false,
+		"allowSyntheticDefaultImports": true,
+		"strict": true,
+		"incremental": true,
+		"forceConsistentCasingInFileNames": true,
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"noEmit": true,
+		"baseUrl": ".",
+		"paths": {
+			"@components/*": [
+				"./src/components/*"
+			],
+			"@layouts/*": [
+				"./src/layouts/*"
+			],
+			"@pages/*": [
+				"./src/pages/*"
+			],
+			"@utils/*": [
+				"./src/utils/*"
+			]
+		},
+		"verbatimModuleSyntax": true
+	}
+}

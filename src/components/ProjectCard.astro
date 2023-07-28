@@ -1,0 +1,52 @@
+---
+import Button from './Button.astro'
+import GithubLink from './icons/Github-link.astro'
+import LinkIcon from './icons/LinkIcon.astro'
+
+interface Props {
+	title: string
+	description: string
+	image: string
+	technologies: string[]
+	github?: string
+	website: string
+}
+
+const { title, description, image, technologies, github, website } = Astro.props
+
+const stringTech = technologies.join(' - ')
+---
+
+<div
+	class='w-full desktop:w-full desktop:max-w-none desktop:justify-self-auto mobile:justify-self-center mobile:max-w-xs rounded-xl backdrop-blur-2xl shadow-[0px_0px_16px_0px_rgba(0,0,0,0.5)] bg-lightgray gradient-custom transition-transform duration-200 hover:scale-105'
+>
+	<img src={image} alt={title} class='w-full h-48 rounded object-cover' />
+	<div class='flex flex-col justify-around w-full h-64 px-5 cursor-default'>
+		<h2 class='text-xl'>{title}</h2>
+		<p class='text-xs text-paragraft'>{description}</p>
+		<h3 class='text-xs text-highlight'>{stringTech}</h3>
+		<div class='flex items-center gap-4'>
+			<Button text='Demo' link={website} gradient='g2' download={false}>
+				<LinkIcon />
+			</Button>
+			{
+				github != null ? (
+					<a href={github} target='_blank'>
+						<GithubLink />
+					</a>
+				) : null
+			}
+		</div>
+	</div>
+</div>
+
+<style>
+	.gradient-custom {
+		background-image: radial-gradient(
+			151.92% 127.02% at 15.32% 21.04%,
+			rgba(105, 59, 147, 0.2),
+			rgba(110, 191, 244, 0.04) 50%,
+			rgba(70, 144, 212, 0) 100%
+		);
+	}
+</style>
