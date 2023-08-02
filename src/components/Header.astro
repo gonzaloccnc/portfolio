@@ -11,6 +11,10 @@ const links: { text: string; link: string }[] = [
 		link: '#home'
 	},
 	{
+		text: 'Experiencia',
+		link: '#experience'
+	},
+	{
 		text: 'Sobre mi',
 		link: '#about'
 	},
@@ -28,9 +32,6 @@ const links: { text: string; link: string }[] = [
 	<nav>
 		<ul class='flex text-md gap-8 items-center links'>
 			{links.map((x) => <Link text={x.text} link={x.link} />)}
-			<li class='cursor-pointer'>
-				<Sun />
-			</li>
 		</ul>
 	</nav>
 </header>
@@ -55,9 +56,6 @@ const links: { text: string; link: string }[] = [
 		<nav class='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full'>
 			<ul class='flex text-md gap-8 flex-col justify-center items-center links' '>
 				{links.map((x) => <Link text={x.text} link={x.link} />)}
-				<li class='cursor-pointer'>
-					<Sun />
-				</li>
 			</ul>
 		</nav>
 	</div>

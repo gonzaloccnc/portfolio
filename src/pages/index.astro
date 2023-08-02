@@ -1,16 +1,18 @@
 ---
 import AboutMe from '@components/AboutMe.astro'
-import Experience from '@components/Experience.astro'
+import {Experience} from '@components/Experience.tsx'
 import Presentation from '@components/Presentation.astro'
 import Projects from '@components/Projects.astro'
 import Skills from '@components/Skills.astro'
+import React from '@components/icons/v1/React.astro'
 import Layout from '@layouts/Layout.astro'
+import { Keywords } from '@utils/experience'
 ---
 
 <Layout title='Gonzalo Manco'>
 	<main>
 		<Presentation />
-		<Experience />
+		<Experience client:only="react" defaultKey={Keywords.CV_PE} />
 		<AboutMe />
 		<Skills />
 		<Projects />
