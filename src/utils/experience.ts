@@ -1,5 +1,4 @@
-
-export enum Keywords {
+enum Keywords {
   CV_PE = "Consigue Ventas",
   ISIL = "ISIL"
 }
@@ -38,3 +37,7 @@ export const experiences: Experience[] = [
     ]
   }
 ]
+
+export {
+  Keywords
+}

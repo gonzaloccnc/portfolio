@@ -2,12 +2,8 @@ import { useState } from 'react'
 import { ExperienceCard } from './ExperienceCard.tsx'
 import { Keywords, experiences } from '@utils/experience'
 
-interface Props {
-  defaultKey: keyof typeof Keywords
-}
-
-const Experience: React.FC<Props> = ({ defaultKey }) => {
-  const [tab, setTab] = useState(defaultKey)
+const Experience: React.FC = () => {
+  const [tab, setTab] = useState(Keywords.CV_PE)
 
   const filterExp = experiences.filter(x => x.keyword === tab)
 
@@ -17,7 +13,7 @@ const Experience: React.FC<Props> = ({ defaultKey }) => {
 
     active.classList.remove('active')
     li.classList.add('active')
-    setTab(li.id as keyof typeof Keywords)
+    setTab(li.id as Keywords)
   }
 
   return (
