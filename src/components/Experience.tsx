@@ -10,10 +10,19 @@ const Experience: React.FC = () => {
   const handleClick: React.MouseEventHandler = ({ target }) => {
     const active = document.querySelector('#nav_experiences ul li.active') as HTMLLIElement
     const li = target as HTMLLIElement
+    const wrap = document.querySelector('#wrapper_exp') as HTMLElement
+
+    if (active.id === li.id) return
 
     active.classList.remove('active')
     li.classList.add('active')
+    wrap.classList.add("opacity-0")
     setTab(li.id as Keywords)
+
+    setTimeout(() => {
+      wrap.classList.remove("opacity-0")
+    }, 200)
+
   }
 
   return (
@@ -44,7 +53,8 @@ const Experience: React.FC = () => {
           </nav>
         </aside>
         <article
-          className='desktop:w-3/4 mobile:w-full flex flex-col gap-6 text-paragraft max-h-96 overflow-y-auto pr-3'
+          id="wrapper_exp"
+          className='desktop:w-3/4 mobile:w-full flex flex-col gap-6 text-paragraft max-h-96 overflow-y-auto pr-3 transition-opacity ease-in-out duration-200'
         >
           {
             filterExp.map(x =>
