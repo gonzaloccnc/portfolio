@@ -7,10 +7,10 @@ interface Props {
 const { text, link } = Astro.props
 ---
 
-<!--  -->
+<!-- hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-r hover:from-h-primary hover:from-0% hover:via-h-seconday hover:via-54.94% hover:to-h-third hover:to-100% -->
 <a
 	href={link}
-	class='cursor-pointer hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-r hover:from-h-primary hover:from-0% hover:via-h-seconday hover:via-54.94% hover:to-h-third hover:to-100% transition-all ease-in duration-500'
+	class='cursor-pointer relative before:transition-all before:ease-in before:duration-300 before:content-[""] before:absolute before:left-0 before:-bottom-2 before:w-0 before:hover:w-3/4 before:h-1 before:bg-gradient-to-r before:from-h-primary before:via-h-seconday'
 >
 	{text}
 </a>
