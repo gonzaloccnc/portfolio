@@ -14,11 +14,12 @@ interface Props {}
 		{
 			projects.map((x) => (
 				<ProjectCard
+					id={x.id}
 					title={x.title}
 					description={x.des}
 					website={x.web}
 					github={x.github}
-					image={x.img}
+					images={x.imgs}
 					technologies={x.technologies}
 				/>
 			))

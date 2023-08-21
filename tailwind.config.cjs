@@ -27,11 +27,12 @@ module.exports = {
 				paragraft: '#C4C4C4',
 				description: '#F0F0F0',
 				extra: '#1F1E1E',
-				lightgray: '#d3d3d30d'
+				lightgray: '#d3d3d30d',
+				indicator: 'rgba(0,0,0,0.5)'
 			},
 			backgroundImage: {
-				me: 'url($images/me.webp)',
-				avatar: 'url($images/avatar.png)'
+				me: 'url(/portfolio/images/me.webp)',
+				avatar: 'url(/portfolio/images/avatar.png)'
 			},
 			backgroundSize: {
 				'mega': '800%'

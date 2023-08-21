@@ -1,0 +1,53 @@
+---
+interface Props {
+	id: string
+	images: string[]
+	title: string
+}
+
+const { id, images, title } = Astro.props
+---
+
+<div class='relative overflow-hidden' id={id}>
+	<picture class='flex overflow-hidden transition-all duration-500'>
+		{images.map((x) => <img src={x} alt={title} class='w-[314px] h-48 rounded object-cover' />)}
+	</picture>
+	<div class='absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1' id='indicators'>
+		{
+			Object.keys(images).length === 1
+				? null
+				: Object.keys(images).map((n) => (
+						<button
+							type='button'
+							class={`w-3 h-3 rounded-full buttons transition-all duration-500 ${
+								n === '0' ? 'bg-highlight' : 'bg-indicator'
+							}`}
+							data-slide-to={n}
+						/>
+				  ))
+		}
+	</div>
+</div>
+
+<script>
+	const buttons = document.querySelectorAll('.buttons') as NodeListOf<HTMLButtonElement>
+
+	buttons.forEach((x) => {
+		x.addEventListener('click', function () {
+			const superParent = this.parentElement?.parentElement as HTMLDivElement
+			const btnActive = document.querySelector(
+				`#${superParent.id} button.bg-highlight`
+			) as HTMLButtonElement
+
+			btnActive.classList.remove('bg-highlight')
+			btnActive.classList.add('bg-indicator')
+
+			this.classList.add('bg-highlight')
+			this.classList.remove('bg-indicator')
+
+			const picture = document.querySelector(`#${superParent.id} picture`) as HTMLPictureElement
+			const mg = parseInt(this.dataset.slideTo as string) * 100
+			picture.style.marginLeft = `-${mg}%`
+		})
+	})
+</script>
