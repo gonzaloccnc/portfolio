@@ -15,9 +15,7 @@
 	"overrides": [
 		{
 			"files": [
-				"*.astro",
-				"**/*.astro/*.ts",
-				"*.astro/*.ts"
+				"*.astro"
 			],
 			"parser": "astro-eslint-parser",
 			"parserOptions": {

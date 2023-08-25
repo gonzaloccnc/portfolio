@@ -1,8 +1,11 @@
 ---
 import Link from './Link.astro'
-import Burger from './icons/Burger.astro'
-import Close from './icons/Close.astro'
+import LinkMobile from './LinkMobile.astro'
+import About from './icons/About.astro'
+import Experience from './icons/Experience.astro'
+import Home from './icons/Home.astro'
 import Logo from './icons/Logo.astro'
+import Projects from './icons/Projects.astro'
 
 const links: { text: string; link: string }[] = [
 	{
@@ -35,30 +38,28 @@ const links: { text: string; link: string }[] = [
 	</nav>
 </header>
 
-<header
-	class='mobile:flex desktop:hidden items-center justify-between fixed w-full left-0 top-0 z-50 bg-[#1d0c34] py-3 px-4 tablet:px-12'
->
-	<a href='#' class='text-xl cursor-pointer'>GM.</a>
-	<div class='flex gap-2 items-center'>
-		<button id='burger'>
-			<Burger />
-		</button>
+<aside class='menu mobile:flex desktop:hidden fixed justify-center items-center z-[100] right-10 bottom-10'>
+	<div class='toggle relative w-10 h-10 bg-gradient-to-l from-g4-primary to-g4-secondary rounded-full flex justify-center cursor-pointer text-xl transition-transform duration-[1.25s] shadow-[0_3px_4px_rgba(0,0,0,0.15)]'>
+		+
 	</div>
 
-	<div
-		class='absolute top-0 left-full w-full h-screen bg-dark transition-all ease-in duration-300'
-		id='nav_mobile'
-	>
-		<div class='absolute top-5 right-5' id='close'>
-			<Close />
-		</div>
-		<nav class='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full'>
-			<ul class='flex text-md gap-8 flex-col justify-center items-center links'>
-				{links.map((x) => <Link text={x.text} link={x.link} />)}
-			</ul>
-		</nav>
-	</div>
-</header>
+	<LinkMobile link='#' title='Home' iterator={1}>
+		<Home />
+	</LinkMobile>
+
+	<LinkMobile link='#experience' title='Experiencia' iterator={2}>
+		<Experience />
+	</LinkMobile>
+
+	<LinkMobile link='#about' title='Sobre mi' iterator={3}>
+		<About />
+	</LinkMobile>
+
+	<LinkMobile link='#projects' title='Proyectos' iterator={4}>
+		<Projects />
+	</LinkMobile>
+
+</aside>
 
 <script>
 	const button = document.querySelector('#burger') as HTMLButtonElement
@@ -101,3 +102,25 @@ const links: { text: string; link: string }[] = [
 		})
 	})
 </script>
+
+<script>
+	let toggle = document.querySelector('.toggle') as HTMLDivElement
+	let menu = document.querySelector('.menu') as HTMLElement
+	toggle.onclick = function () {
+		menu.classList.toggle('active')
+	}
+</script>
+
+<style is:global>
+	.menu.active .toggle {
+		transform: rotate(315deg);
+		box-shadow:
+			0 6px 6px #6964de,
+			0 0 0 2px #fca6e9,
+			0 0 0 6px #fff;
+	}
+
+	.menu.active li {
+		scale: 1;
+	}
+</style>
