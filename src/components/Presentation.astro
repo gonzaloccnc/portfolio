@@ -28,7 +28,13 @@ const CV = 'https://drive.google.com/uc?id=1s5x1qoTOo6HiripWC1dpnO7p-abbjPBq&exp
 		<div
 			class='flex gap-4 desktop:flex-nowrap desktop:justify-start desktop:flex-row mobile:flex-wrap mobile:justify-center'
 		>
-			<Button text='Github' gradient='g2' link='https://github.com/gonzaloccnc' download={false}>
+			<Button
+				text='Github'
+				gradient='g2'
+				link='https://github.com/gonzaloccnc'
+				download={false}
+				label='Ir a mi repositorio github'
+			>
 				<Github />
 			</Button>
 			<Button
@@ -36,10 +42,17 @@ const CV = 'https://drive.google.com/uc?id=1s5x1qoTOo6HiripWC1dpnO7p-abbjPBq&exp
 				gradient='g3'
 				link='https://www.linkedin.com/in/gonzalo-manco-garcia-6ab21924a'
 				download={false}
+				label='Ir a mi linkedin'
 			>
 				<Linkedin />
 			</Button>
-			<Button text='Descargar CV' gradient='g4' link={CV} download>
+			<Button
+				text='Descargar CV'
+				gradient='g4'
+				link={CV}
+				download
+				label='descargar mi CV en formato PDF'
+			>
 				<Download />
 			</Button>
 		</div>

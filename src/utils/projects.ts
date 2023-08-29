@@ -16,8 +16,15 @@ const projects: Project[] = [{
   web: 'https://gs-movies.vercel.app/',
   imgs: ['./images/gs_movies_mk.webp', './images/mobile_gs_movies_mk.webp'],
   technologies: ['NextJS', 'TheMovieDB', 'TailwindCSS', 'TypeScript']
-},
-{
+}, {
+  id: 'mplace_rest',
+  title: 'API Marketplace',
+  des: 'Proyecto personal implementando Spring Boot, Security, PostgreSQL y Swagger UI',
+  github: 'https://github.com/gonzaloccnc/marketplace_backend',
+  web: 'https://marketplace-5ht5.onrender.com/api/v1/swagger-ui/index.html',
+  imgs: ['./images/api.webp'],
+  technologies: ['Java', 'Spring boot', 'Swagger', 'JWT']
+}, {
   id: 'ecommerce',
   title: 'Eccomerce',
   des: 'Proyecto personal sobre una tienda online, basado en un diseño de wix.',

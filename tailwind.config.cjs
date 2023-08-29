@@ -42,6 +42,10 @@ module.exports = {
 				tablet: '768px',
 				desktop: '1024px',
 				'desktop-sm': '1200px'
+			},
+			gridTemplateColumns: {
+				skills: 'repeat(5, 125px)',
+				'skills-mobile': 'repeat(2, 125px)'
 			}
 		},
 		fontSize: {

@@ -24,16 +24,16 @@ const stringTech = technologies.join(' - ')
 >
 	<Carrousel images={images} title={title} id={id} />
 	<div class='flex flex-col justify-around w-full h-64 px-5 cursor-default'>
-		<h2 class='text-xl'>{title}</h2>
+		<h2 class='text-xl font-walsheim'>{title}</h2>
 		<p class='text-xs text-paragraft'>{description}</p>
 		<h3 class='text-xs text-highlight'>{stringTech}</h3>
 		<div class='flex items-center gap-4'>
-			<Button text='Demo' link={website} gradient='g2' download={false}>
+			<Button text='Demo' link={website} gradient='g2' download={false} label='ir a demostración'>
 				<LinkIcon />
 			</Button>
 			{
 				github != null ? (
-					<a href={github} target='_blank'>
+					<a href={github} target='_blank' aria-label='enlace a github'>
 						<GithubLink />
 					</a>
 				) : null

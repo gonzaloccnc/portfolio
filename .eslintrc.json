@@ -7,11 +7,6 @@
 		"sourceType": "module",
 		"project": "./tsconfig.json"
 	},
-	"env": {
-		"browser": true,
-		"node": true,
-		"es2021": true
-	},
 	"overrides": [
 		{
 			"files": [

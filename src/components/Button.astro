@@ -6,9 +6,10 @@ interface Props {
 	text: string
 	gradient: keyof typeof colors
 	download: boolean
+	label: string
 }
 
-const { link, text, gradient, download } = Astro.props
+const { link, text, gradient, download, label } = Astro.props
 
 const [primary, secondary] = colors[gradient]
 
@@ -26,6 +27,8 @@ const hover = backgrounds[gradient]
 	target={download ? '_self' : '_blank'}
 	class=`tablet:w-auto mobile:w-56 relative py-3 flex items-center gap-2 rounded-md px-12 bg-origin-border bg-clip-border border border-transparent hover:before:content-[''] hover:before:absolute hover:before:top-0 hover:before:left-0 hover:before:-z-10 hover:before:w-full hover:before:h-full hover:before:rounded-md hover:before:blur hover:before:bg-gradient-to-l ${hover}`
 	download={download}
+	aria-label={label}
+	role='button'
 >
 	<slot />
 	{text}

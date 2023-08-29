@@ -1,11 +1,11 @@
 ---
 import Link from './Link.astro'
 import LinkMobile from './LinkMobile.astro'
-import About from './icons/About.astro'
-import Experience from './icons/Experience.astro'
+import About from './icons/AboutIcon.astro'
+import Experience from './icons/ExperienceIcon.astro'
 import Home from './icons/Home.astro'
 import Logo from './icons/Logo.astro'
-import Projects from './icons/Projects.astro'
+import Projects from './icons/ProjectsIcon.astro'
 
 const links: { text: string; link: string }[] = [
 	{
@@ -30,16 +30,18 @@ const links: { text: string; link: string }[] = [
 <header
 	class='mobile:hidden desktop-sm:px-32 desktop:px-14 desktop:flex items-center justify-between fixed w-full top-0 z-50 bg-[#1d0c34] py-3 max-w-[1440px] -translate-x-1/2 left-1/2'
 >
-	<a href='#' class='text-xl cursor-pointer flex items-center'><Logo /> GM.</a>
-	<nav>
-		<ul class='flex text-md gap-8 items-center links'>
-			{links.map((x) => <Link text={x.text} link={x.link} />)}
-		</ul>
+	<a href='#' class='text-xl cursor-pointer flex items-center font-walsheim'><Logo /> GM.</a>
+	<nav class='flex text-md gap-8 items-center font-walsheim links'>
+		{links.map((x) => <Link text={x.text} link={x.link} />)}
 	</nav>
 </header>
 
-<aside class='menu mobile:flex desktop:hidden fixed justify-center items-center z-[100] right-10 bottom-10'>
-	<div class='toggle relative w-10 h-10 bg-gradient-to-l from-g4-primary to-g4-secondary rounded-full flex justify-center cursor-pointer text-xl transition-transform duration-[1.25s] shadow-[0_3px_4px_rgba(0,0,0,0.15)]'>
+<aside
+	class='menu mobile:flex desktop:hidden fixed justify-center items-center z-[100] right-10 bottom-10'
+>
+	<div
+		class='toggle relative w-10 h-10 bg-gradient-to-l from-g4-primary to-g4-secondary rounded-full flex justify-center cursor-pointer text-xl transition-transform duration-[1.25s] shadow-[0_3px_4px_rgba(0,0,0,0.15)]'
+	>
 		+
 	</div>
 
@@ -58,31 +60,9 @@ const links: { text: string; link: string }[] = [
 	<LinkMobile link='#projects' title='Proyectos' iterator={4}>
 		<Projects />
 	</LinkMobile>
-
 </aside>
 
 <script>
-	const button = document.querySelector('#burger') as HTMLButtonElement
-	const nav = document.querySelector('#nav_mobile') as HTMLDivElement
-	const close = document.querySelector('#close') as HTMLDivElement
-
-	close.addEventListener('click', () => {
-		setTimeout(() => {
-			nav.classList.remove('left-0')
-			nav.classList.add('left-full')
-		}, 300)
-	})
-
-	button.addEventListener('click', () => {
-		setTimeout(() => {
-			nav.classList.remove('left-full')
-			nav.classList.add('left-0')
-		}, 300)
-	})
-</script>
-
-<script>
-	const nav = document.querySelector('#nav_mobile') as HTMLDivElement
 	const links = document.querySelectorAll('.links a') as NodeListOf<HTMLAnchorElement>
 
 	links.forEach((x) => {
@@ -94,11 +74,6 @@ const links: { text: string; link: string }[] = [
 			const goTo = current.getAttribute('href') === '#home' ? 0 : target.offsetTop - 60
 
 			window.scrollTo(0, goTo)
-
-			setTimeout(() => {
-				nav.classList.remove('left-0')
-				nav.classList.add('left-full')
-			}, 300)
 		})
 	})
 </script>

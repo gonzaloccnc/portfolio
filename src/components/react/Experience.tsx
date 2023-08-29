@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { ExperienceCard } from './ExperienceCard.tsx'
+import { ExperienceCard } from '../react/ExperienceCard.tsx'
 import { Keywords, experiences } from '@utils/experience'
 
 const Experience: React.FC = () => {
@@ -27,7 +27,7 @@ const Experience: React.FC = () => {
 
   return (
     <section className='mt-32 pt-10 border-b border-b-extra pb-16' id='experience'>
-      <h1 className='text-md mb-10 uppercase'>Experiencia</h1>
+      <h1 className='mb-10 uppercase'>Experiencia</h1>
       <div className='flex gap-16 desktop:flex-row mobile:flex-col'>
         <aside
           className='desktop:w-1/4 mobile:w-full mobile:max-h-40 desktop:max-h-96 

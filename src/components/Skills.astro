@@ -1,159 +1,113 @@
 ---
 import WrapBlur from '@components/WrapBlur.astro'
 
-import React from './icons/v1/React.astro'
-import Github from './icons/v1/Github.astro'
-import Html from './icons/v1/Html.astro'
-import Javascript from './icons/v1/Javascript.astro'
-import NextJS from './icons/v1/Next.astro'
-import Node from './icons/v1/Node.astro'
-import Tailwind from './icons/v1/Tailwind.astro'
-import Typescript from './icons/v1/Typescript.astro'
-import Css from './icons/v1/Css.astro'
-import Git from './icons/v1/Git.astro'
-import Mongo from './icons/v1/Mongo.astro'
-import Postgre from './icons/v1/Postgre.astro'
-
-import Cssv2 from './icons/v2/Css.astro'
-import Javascriptv2 from './icons/v2/Javascript.astro'
-import Reactv2 from './icons/v2/React.astro'
-import Typescriptv2 from './icons/v2/Typescript.astro'
-import Gitv2 from './icons/v2/Git.astro'
-import Tailwindv2 from './icons/v2/Tailwind.astro'
-import Nodev2 from './icons/v2/Node.astro'
-import Nextjsv2 from './icons/v2/Next.astro'
+import React from './icons/React.astro'
+import Github from './icons/Github.astro'
+import Html from './icons/Html.astro'
+import Javascript from './icons/Javascript.astro'
+import NextJS from './icons/Next.astro'
+import Node from './icons/Node.astro'
+import Tailwind from './icons/Tailwind.astro'
+import Typescript from './icons/Typescript.astro'
+import Css from './icons/Css.astro'
+import Git from './icons/Git.astro'
+import Mongo from './icons/Mongo.astro'
+import Postgre from './icons/Postgre.astro'
 ---
 
-<section class='mt-32' id='skills'>
-	<h1 class='text-md uppercase'>Tecnologías y Habilidades</h1>
+<section class='mt-32' id='skills' aria-roledescription='Tecnologías'>
+	<h1 class='uppercase'>Tecnologías y Habilidades</h1>
 	<div class='mt-10'>
-		<h2 class='text-center text-xl'>Tecnologías que uso diariamente</h2>
-		<WrapBlur>
-			<div
-				class='justify-self-center relative after:absolute after:w-24 after:text-center after:text-xs after:bg-highlight after:rounded-md after:-bottom-3/4 after:left-1/2 after:-translate-x-1/2 after:p-2 after:transition-all after:duration-400 after:z-50 after:invisible after:content-[attr(data-tooltip)] hover:after:visible'
-				data-tooltip='React'
-			>
+		<h2 class='text-center text-xl mb-10'>Tecnologías que uso diariamente</h2>
+		<section
+			class='grid desktop:grid-cols-skills gap-x-5 gap-y-10 place-content-center mobile:grid-cols-skills-mobile'
+		>
+			<WrapBlur title='React'>
 				<React />
-			</div>
-			<div
-				class='justify-self-center relative after:absolute after:w-24 after:text-center after:text-xs after:bg-highlight after:rounded-md after:-bottom-3/4 after:left-1/2 after:-translate-x-1/2 after:p-2 after:transition-all after:duration-400 after:z-50 after:invisible after:content-[attr(data-tooltip)] hover:after:visible'
-				data-tooltip='JavaScript'
-			>
+			</WrapBlur>
+
+			<WrapBlur title='JavaScript'>
 				<Javascript />
-			</div>
-			<div
-				class='justify-self-center relative after:absolute after:w-24 after:text-center after:text-xs after:bg-highlight after:rounded-md after:-bottom-3/4 after:left-1/2 after:-translate-x-1/2 after:p-2 after:transition-all after:duration-400 after:z-50 after:invisible after:content-[attr(data-tooltip)] hover:after:visible'
-				data-tooltip='TypeScript'
-			>
+			</WrapBlur>
+
+			<WrapBlur title='TypeScript'>
 				<Typescript />
-			</div>
-			<div
-				class='justify-self-center relative after:absolute after:w-24 after:text-center after:text-xs after:bg-highlight after:rounded-md after:-bottom-3/4 after:left-1/2 after:-translate-x-1/2 after:p-2 after:transition-all after:duration-400 after:z-50 after:invisible after:content-[attr(data-tooltip)] hover:after:visible'
-				data-tooltip='CSS'
-			>
+			</WrapBlur>
+
+			<WrapBlur title='CSS'>
 				<Css />
-			</div>
-			<div
-				class='justify-self-center relative after:absolute after:w-24 after:text-center after:text-xs after:bg-highlight after:rounded-md after:-bottom-3/4 after:left-1/2 after:-translate-x-1/2 after:p-2 after:transition-all after:duration-400 after:z-50 after:invisible after:content-[attr(data-tooltip)] hover:after:visible'
-				data-tooltip='HTML'
-			>
+			</WrapBlur>
+
+			<WrapBlur title='HTML'>
 				<Html />
-			</div>
-			<div
-				class='justify-self-center relative after:absolute after:w-24 after:text-center after:text-xs after:bg-highlight after:rounded-md after:-bottom-3/4 after:left-1/2 after:-translate-x-1/2 after:p-2 after:transition-all after:duration-400 after:z-50 after:invisible after:content-[attr(data-tooltip)] hover:after:visible'
-				data-tooltip='Git'
-			>
+			</WrapBlur>
+
+			<WrapBlur title='Git'>
 				<Git />
-			</div>
-			<div
-				class='justify-self-center relative after:absolute after:w-24 after:text-center after:text-xs after:bg-highlight after:rounded-md after:-bottom-3/4 after:left-1/2 after:-translate-x-1/2 after:p-2 after:transition-all after:duration-400 after:z-50 after:invisible after:content-[attr(data-tooltip)] hover:after:visible'
-				data-tooltip='Github'
-			>
+			</WrapBlur>
+
+			<WrapBlur title='Github'>
 				<Github />
-			</div>
-			<div
-				class='justify-self-center relative after:absolute after:w-24 after:text-center after:text-xs after:bg-highlight after:rounded-md after:-bottom-3/4 after:left-1/2 after:-translate-x-1/2 after:p-2 after:transition-all after:duration-400 after:z-50 after:invisible after:content-[attr(data-tooltip)] hover:after:visible'
-				data-tooltip='TailwindCSS'
-			>
-				<Tailwind />
-			</div>
-			<div
-				class='justify-self-center relative after:absolute after:w-24 after:text-center after:text-xs after:bg-highlight after:rounded-md after:-bottom-3/4 after:left-1/2 after:-translate-x-1/2 after:p-2 after:transition-all after:duration-400 after:z-50 after:invisible after:content-[attr(data-tooltip)] hover:after:visible'
-				data-tooltip='NodeJS'
-			>
+			</WrapBlur>
+
+			<WrapBlur title='TailwindCSS'>
+				<Tailwind id='v1-tcss' />
+			</WrapBlur>
+
+			<WrapBlur title='NodeJS'>
 				<Node />
-			</div>
-			<div
-				class='justify-self-center relative after:absolute after:w-24 after:text-center after:text-xs after:bg-highlight after:rounded-md after:-bottom-3/4 after:left-1/2 after:-translate-x-1/2 after:p-2 after:transition-all after:duration-400 after:z-50 after:invisible after:content-[attr(data-tooltip)] hover:after:visible'
-				data-tooltip='NextJS'
-			>
+			</WrapBlur>
+
+			<WrapBlur title='NextJS'>
 				<NextJS />
-			</div>
-		</WrapBlur>
+			</WrapBlur>
+		</section>
 	</div>
+
 	<div class='mt-10'>
-		<h2 class='text-center text-xl'>Tecnologías que use en proyectos</h2>
-		<WrapBlur>
-			<div
-				class='justify-self-center relative after:absolute after:w-24 after:text-center after:text-xs after:bg-highlight after:rounded-md after:-bottom-3/4 after:left-1/2 after:-translate-x-1/2 after:p-2 after:transition-all after:duration-400 after:z-50 after:invisible after:content-[attr(data-tooltip)] hover:after:visible'
-				data-tooltip='React'
-			>
-				<Reactv2 />
-			</div>
-			<div
-				class='justify-self-center relative after:absolute after:w-24 after:text-center after:text-xs after:bg-highlight after:rounded-md after:-bottom-3/4 after:left-1/2 after:-translate-x-1/2 after:p-2 after:transition-all after:duration-400 after:z-50 after:invisible after:content-[attr(data-tooltip)] hover:after:visible'
-				data-tooltip='JavaScript'
-			>
-				<Javascriptv2 />
-			</div>
-			<div
-				class='justify-self-center relative after:absolute after:w-24 after:text-center after:text-xs after:bg-highlight after:rounded-md after:-bottom-3/4 after:left-1/2 after:-translate-x-1/2 after:p-2 after:transition-all after:duration-400 after:z-50 after:invisible after:content-[attr(data-tooltip)] hover:after:visible'
-				data-tooltip='TypeScript'
-			>
-				<Typescriptv2 />
-			</div>
-			<div
-				class='justify-self-center relative after:absolute after:w-24 after:text-center after:text-xs after:bg-highlight after:rounded-md after:-bottom-3/4 after:left-1/2 after:-translate-x-1/2 after:p-2 after:transition-all after:duration-400 after:z-50 after:invisible after:content-[attr(data-tooltip)] hover:after:visible'
-				data-tooltip='NodeJS'
-			>
-				<Nodev2 />
-			</div>
-			<div
-				class='justify-self-center relative after:absolute after:w-24 after:text-center after:text-xs after:bg-highlight after:rounded-md after:-bottom-3/4 after:left-1/2 after:-translate-x-1/2 after:p-2 after:transition-all after:duration-400 after:z-50 after:invisible after:content-[attr(data-tooltip)] hover:after:visible'
-				data-tooltip='CSS'
-			>
-				<Cssv2 />
-			</div>
-			<div
-				class='justify-self-center relative after:absolute after:w-24 after:text-center after:text-xs after:bg-highlight after:rounded-md after:-bottom-3/4 after:left-1/2 after:-translate-x-1/2 after:p-2 after:transition-all after:duration-400 after:z-50 after:invisible after:content-[attr(data-tooltip)] hover:after:visible'
-				data-tooltip='TailwindCSS'
-			>
-				<Tailwindv2 />
-			</div>
-			<div
-				class='justify-self-center relative after:absolute after:w-24 after:text-center after:text-xs after:bg-highlight after:rounded-md after:-bottom-3/4 after:left-1/2 after:-translate-x-1/2 after:p-2 after:transition-all after:duration-400 after:z-50 after:invisible after:content-[attr(data-tooltip)] hover:after:visible'
-				data-tooltip='Git'
-			>
-				<Gitv2 />
-			</div>
-			<div
-				class='justify-self-center relative after:absolute after:w-24 after:text-center after:text-xs after:bg-highlight after:rounded-md after:-bottom-3/4 after:left-1/2 after:-translate-x-1/2 after:p-2 after:transition-all after:duration-400 after:z-50 after:invisible after:content-[attr(data-tooltip)] hover:after:visible'
-				data-tooltip='MongoDB'
-			>
-				<Mongo />
-			</div>
-			<div
-				class='justify-self-center relative after:absolute after:w-24 after:text-center after:text-xs after:bg-highlight after:rounded-md after:-bottom-3/4 after:left-1/2 after:-translate-x-1/2 after:p-2 after:transition-all after:duration-400 after:z-50 after:invisible after:content-[attr(data-tooltip)] hover:after:visible'
-				data-tooltip='PostgreSQL'
-			>
+		<h2 class='text-center text-xl mb-10'>Tecnologías que use en proyectos</h2>
+		<section
+			class='grid desktop:grid-cols-skills gap-x-5 gap-y-10 place-content-center mobile:grid-cols-skills-mobile'
+		>
+			<WrapBlur title='React'>
+				<React />
+			</WrapBlur>
+
+			<WrapBlur title='JavaScript'>
+				<Javascript />
+			</WrapBlur>
+
+			<WrapBlur title='TypeScript'>
+				<Typescript />
+			</WrapBlur>
+
+			<WrapBlur title='NodeJS'>
+				<Node />
+			</WrapBlur>
+
+			<WrapBlur title='CSS'>
+				<Css />
+			</WrapBlur>
+
+			<WrapBlur title='TailwindCSS'>
+				<Tailwind id='v2-tcss' />
+			</WrapBlur>
+
+			<WrapBlur title='Git'>
+				<Git />
+			</WrapBlur>
+
+			<WrapBlur title='MongoDB'>
+				<Mongo id='v2-mg' />
+			</WrapBlur>
+
+			<WrapBlur title='PostgreSQL'>
 				<Postgre />
-			</div>
-			<div
-				class='justify-self-center relative after:absolute after:w-24 after:text-center after:text-xs after:bg-highlight after:rounded-md after:-bottom-3/4 after:left-1/2 after:-translate-x-1/2 after:p-2 after:transition-all after:duration-400 after:z-50 after:invisible after:content-[attr(data-tooltip)] hover:after:visible'
-				data-tooltip='NextJS'
-			>
-				<Nextjsv2 />
-			</div>
-		</WrapBlur>
+			</WrapBlur>
+
+			<WrapBlur title='NextJS'>
+				<NextJS />
+			</WrapBlur>
+		</section>
 	</div>
 </section>
