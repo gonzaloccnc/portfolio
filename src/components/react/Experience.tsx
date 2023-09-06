@@ -54,7 +54,7 @@ const Experience: React.FC = () => {
         </aside>
         <article
           id="wrapper_exp"
-          className='desktop:w-3/4 mobile:w-full flex flex-col gap-6 text-paragraft max-h-96 overflow-y-auto pr-3 transition-opacity ease-in-out duration-200'
+          className='desktop:w-3/4 mobile:w-full flex flex-col gap-4 text-paragraft max-h-96 overflow-y-auto pr-3 transition-opacity ease-in-out duration-200'
         >
           {
             filterExp.map(x =>

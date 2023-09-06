@@ -12,7 +12,7 @@ const ExperienceCard: React.FC<Props> = ({ role, date, enterprice, works }) => {
 				<h2 className='text-base leading-6'>{date}</h2>
 			</div>
 			<h3 className='text-xs text-highlight'>{enterprice}</h3>
-			<ul className='flex flex-col gap-6'>
+			<ul className='flex flex-col gap-2'>
 				{works.map((x, ix) => <li key={ix} className='tablet:text-base mobile:text-xs'>{x}</li>)}
 			</ul>
 		</>
