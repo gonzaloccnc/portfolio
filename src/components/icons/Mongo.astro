@@ -1,70 +1,76 @@
 ---
 interface Props {
-	id: string
+  id: string;
 }
 
-const { id } = Astro.props
+const { id } = Astro.props;
 ---
 
-<svg width='64' height='64' viewBox='0 0 65 64' fill='none' xmlns='http://www.w3.org/2000/svg'>
-	<g id='vscode-icons:file-type-mongo'>
-		<path
-			id='Vector'
-			d='M33.3101 60L31.8081 59.502C31.8081 59.502 32.0081 51.902 29.2581 51.368C27.4581 49.272 29.5241 -38.114 36.1041 51.07C34.8556 51.7033 33.9004 52.7947 33.4381 54.116C33.1903 56.0675 33.1474 58.0396 33.3101 60Z'
-			fill={`url(#${id}-1)`}></path>
-		<path
-			id='Vector_2'
-			d='M34.1221 52.658C38.1212 49.6475 41.1839 45.5639 42.9541 40.8818C44.7243 36.1996 45.1293 31.1112 44.1221 26.208C41.1821 13.238 34.2201 8.974 33.4701 7.346C32.823 6.33226 32.2706 5.26106 31.8201 4.146L32.3741 40.284C32.3741 40.284 31.2261 51.328 34.1221 52.658Z'
-			fill={`url(#${id}-2)`}></path>
-		<path
-			id='Vector_3'
-			d='M31.044 53.138C31.044 53.138 18.802 44.8 19.51 30.05C19.5761 25.6033 20.5956 21.2225 22.4999 17.2036C24.4041 13.1847 27.1486 9.6213 30.548 6.754C30.9453 6.41649 31.2609 5.99335 31.4712 5.51636C31.6814 5.03937 31.7809 4.52094 31.762 4C32.524 5.64 32.4 28.486 32.48 31.158C32.79 41.552 31.902 51.176 31.044 53.138Z'
-			fill={`url(#${id}-3)`}></path>
-	</g>
-	<defs>
-		<linearGradient
-			id={id + '-1'}
-			x1='23.2134'
-			y1='32.5046'
-			x2='40.4767'
-			y2='38.3628'
-			gradientUnits='userSpaceOnUse'
-		>
-			<stop offset='0.231' stop-color='#999875'></stop>
-			<stop offset='0.563' stop-color='#9B9977'></stop>
-			<stop offset='0.683' stop-color='#A09F7E'></stop>
-			<stop offset='0.768' stop-color='#A9A889'></stop>
-			<stop offset='0.837' stop-color='#B7B69A'></stop>
-			<stop offset='0.896' stop-color='#C9C7B0'></stop>
-			<stop offset='0.948' stop-color='#DEDDCB'></stop>
-			<stop offset='0.994' stop-color='#F8F6EB'></stop>
-			<stop offset='1' stop-color='#FBF9EF'></stop>
-		</linearGradient>
-		<linearGradient
-			id={id + '-2'}
-			x1='29.544'
-			y1='3.88777'
-			x2='37.176'
-			y2='51.5457'
-			gradientUnits='userSpaceOnUse'
-		>
-			<stop stop-color='#48A547'></stop>
-			<stop offset='1' stop-color='#3F9143'></stop>
-		</linearGradient>
-		<linearGradient
-			id={id + '-3'}
-			x1='18.457'
-			y1='31.51'
-			x2='38.9382'
-			y2='24.6509'
-			gradientUnits='userSpaceOnUse'
-		>
-			<stop stop-color='#41A247'></stop>
-			<stop offset='0.352' stop-color='#4BA74B'></stop>
-			<stop offset='0.956' stop-color='#67B554'></stop>
-			<stop offset='1' stop-color='#69B655'></stop>
-		</linearGradient>
-	</defs>
+<svg
+  width="64"
+  height="64"
+  viewBox="0 0 65 64"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <g id="vscode-icons:file-type-mongo">
+    <path
+      id="Vector"
+      d="M33.3101 60L31.8081 59.502C31.8081 59.502 32.0081 51.902 29.2581 51.368C27.4581 49.272 29.5241 -38.114 36.1041 51.07C34.8556 51.7033 33.9004 52.7947 33.4381 54.116C33.1903 56.0675 33.1474 58.0396 33.3101 60Z"
+      fill={`url(#${id}-1)`}></path>
+    <path
+      id="Vector_2"
+      d="M34.1221 52.658C38.1212 49.6475 41.1839 45.5639 42.9541 40.8818C44.7243 36.1996 45.1293 31.1112 44.1221 26.208C41.1821 13.238 34.2201 8.974 33.4701 7.346C32.823 6.33226 32.2706 5.26106 31.8201 4.146L32.3741 40.284C32.3741 40.284 31.2261 51.328 34.1221 52.658Z"
+      fill={`url(#${id}-2)`}></path>
+    <path
+      id="Vector_3"
+      d="M31.044 53.138C31.044 53.138 18.802 44.8 19.51 30.05C19.5761 25.6033 20.5956 21.2225 22.4999 17.2036C24.4041 13.1847 27.1486 9.6213 30.548 6.754C30.9453 6.41649 31.2609 5.99335 31.4712 5.51636C31.6814 5.03937 31.7809 4.52094 31.762 4C32.524 5.64 32.4 28.486 32.48 31.158C32.79 41.552 31.902 51.176 31.044 53.138Z"
+      fill={`url(#${id}-3)`}></path>
+  </g>
+  <defs>
+    <linearGradient
+      id={id + "-1"}
+      x1="23.2134"
+      y1="32.5046"
+      x2="40.4767"
+      y2="38.3628"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop offset="0.231" stop-color="#999875"></stop>
+      <stop offset="0.563" stop-color="#9B9977"></stop>
+      <stop offset="0.683" stop-color="#A09F7E"></stop>
+      <stop offset="0.768" stop-color="#A9A889"></stop>
+      <stop offset="0.837" stop-color="#B7B69A"></stop>
+      <stop offset="0.896" stop-color="#C9C7B0"></stop>
+      <stop offset="0.948" stop-color="#DEDDCB"></stop>
+      <stop offset="0.994" stop-color="#F8F6EB"></stop>
+      <stop offset="1" stop-color="#FBF9EF"></stop>
+    </linearGradient>
+    <linearGradient
+      id={id + "-2"}
+      x1="29.544"
+      y1="3.88777"
+      x2="37.176"
+      y2="51.5457"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop stop-color="#48A547"></stop>
+      <stop offset="1" stop-color="#3F9143"></stop>
+    </linearGradient>
+    <linearGradient
+      id={id + "-3"}
+      x1="18.457"
+      y1="31.51"
+      x2="38.9382"
+      y2="24.6509"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop stop-color="#41A247"></stop>
+      <stop offset="0.352" stop-color="#4BA74B"></stop>
+      <stop offset="0.956" stop-color="#67B554"></stop>
+      <stop offset="1" stop-color="#69B655"></stop>
+    </linearGradient>
+  </defs>
 </svg>
 
 <!-- 
