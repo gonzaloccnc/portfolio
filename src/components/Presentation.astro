@@ -6,64 +6,64 @@ import Github from "./icons/Github-link.astro";
 import Linkedin from "./icons/Linkedin.astro";
 
 const CV =
-	"https://drive.google.com/uc?id=1s5x1qoTOo6HiripWC1dpnO7p-abbjPBq&export=download";
+  "https://drive.google.com/file/d/1s5x1qoTOo6HiripWC1dpnO7p-abbjPBq/view?usp=sharing";
 ---
 
 <section class="text-description desktop:mt-20 mobile:mt-8" id="home">
-	<div
-		class="flex items-center justify-between tablet:flex-row tablet:gap-0 mobile:flex-col mobile:gap-10"
-	>
-		<div>
-			<h3 class="italic opacity-70">Hola, soy</h3>
-			<h1
-				class="mobile:text-smega tablet:text-lmega desktop:text-mega desktop:leading-[110px] mobile:leading-[50px] tablet:leading-none font-walsheim font-medium bg-clip-text text-transparent bg-gradient-to-r from-h-primary from-0% via-h-seconday via-54.94% to-h-third to-100% mobile:my-2 desktop:my-0"
-			>
-				Gonzalo Manco
-			</h1>
-			<p class="text-md">Desarrollador de software - Full Stack Developer</p>
-		</div>
-		<div class="bg-avatar w-80 h-80 bg-no-repeat bg-contain bg-center"></div>
-	</div>
+  <div
+    class="flex items-center justify-between tablet:flex-row tablet:gap-0 mobile:flex-col mobile:gap-10"
+  >
+    <div>
+      <h3 class="italic opacity-70">Hola, soy</h3>
+      <h1
+        class="mobile:text-smega tablet:text-lmega desktop:text-mega desktop:leading-[110px] mobile:leading-[50px] tablet:leading-none font-walsheim font-medium bg-clip-text text-transparent bg-gradient-to-r from-h-primary from-0% via-h-seconday via-54.94% to-h-third to-100% mobile:my-2 desktop:my-0"
+      >
+        Gonzalo Manco
+      </h1>
+      <p class="text-md">Desarrollador de software - Full Stack Developer</p>
+    </div>
+    <div class="bg-avatar w-80 h-80 bg-no-repeat bg-contain bg-center"></div>
+  </div>
 
-	<div
-		class="flex gap-4 desktop:mt-20 mobile:mt-10 desktop:justify-between mobile:justify-center"
-	>
-		<div
-			class="flex gap-4 desktop:flex-nowrap desktop:justify-start desktop:flex-row mobile:flex-wrap mobile:justify-center"
-		>
-			<Button
-				width="w-56"
-				text="GitHub"
-				gradient="g2"
-				link="https://github.com/gonzaloccnc"
-				download={false}
-				label="Ir a mi repositorio GitHub"
-			>
-				<Github />
-			</Button>
-			<Button
-				width="w-56"
-				text="LinkedIn"
-				gradient="g3"
-				link="https://www.linkedin.com/in/gonzalo-manco-garcia-6ab21924a"
-				download={false}
-				label="Ir a mi linkedin"
-			>
-				<Linkedin />
-			</Button>
-			<Button
-				width="w-56"
-				text="Descargar CV"
-				gradient="g4"
-				link={CV}
-				download
-				label="descargar mi CV en formato PDF"
-			>
-				<Download />
-			</Button>
-		</div>
-		<div class="desktop:block mobile:hidden">
-			<Arrow />
-		</div>
-	</div>
+  <div
+    class="flex gap-4 desktop:mt-20 mobile:mt-10 desktop:justify-between mobile:justify-center"
+  >
+    <div
+      class="flex gap-4 desktop:flex-nowrap desktop:justify-start desktop:flex-row mobile:flex-wrap mobile:justify-center"
+    >
+      <Button
+        width="w-56"
+        text="GitHub"
+        gradient="g2"
+        link="https://github.com/gonzaloccnc"
+        download={false}
+        label="Ir a mi repositorio GitHub"
+      >
+        <Github />
+      </Button>
+      <Button
+        width="w-56"
+        text="LinkedIn"
+        gradient="g3"
+        link="https://www.linkedin.com/in/gonzalo-manco-garcia-6ab21924a"
+        download={false}
+        label="Ir a mi linkedin"
+      >
+        <Linkedin />
+      </Button>
+      <Button
+        width="w-56"
+        text="Descargar CV"
+        gradient="g4"
+        link={CV}
+        download={false}
+        label="descargar mi CV en formato PDF"
+      >
+        <Download />
+      </Button>
+    </div>
+    <div class="desktop:block mobile:hidden">
+      <Arrow />
+    </div>
+  </div>
 </section>
