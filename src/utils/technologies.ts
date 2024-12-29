@@ -45,7 +45,7 @@ export const technologies: Technologies = {
     { label: "MongoDB", url: "mongodb.svg" },
     { label: "PostgreSQL", url: "postgresql.svg" },
     { label: "MySQL", url: "mysql.svg" },
-    { label: "Redis", url: "redis.svg" },
+    // { label: "Redis", url: "redis.svg" },
     { label: "SQLite", url: "sqlite.svg" },
     { label: "Git", url: "git.svg" },
     { label: "Github", url: "github.svg" },
