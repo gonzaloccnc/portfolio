@@ -14,7 +14,7 @@ const SkillCard: React.FC<SkillCarrdProps> = ({ title, url }) => {
         backgroundImage: "radial-gradient(151.92% 127.02% at 15.32% 21.04%, rgba(105, 59, 147, 0.2), rgba(110, 191, 244, 0.04) 50%, rgba(70, 144, 212, 0) 100%)"
       }}
     >
-      <img src={`/portfolio/icons/${url}`} className="w-16 h-16" />
+      <img src={`/portfolio/icons/${url}`} width='64' height='64' alt={title} loading="lazy" />
     </div>
   )
 }

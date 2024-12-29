@@ -2,7 +2,7 @@ import { type Experience } from '@utils/experience'
 
 interface Props extends Experience { }
 
-const ExperienceCard: React.FC<Props> = ({ role, date, enterprice, works }) => {
+const ExperienceCard: React.FC<Props> = ({ role, date, enterprice, works, locate }) => {
 	return (
 		<>
 			<div
@@ -11,7 +11,7 @@ const ExperienceCard: React.FC<Props> = ({ role, date, enterprice, works }) => {
 				<h1 className='text-xl text-white'>{role}</h1>
 				<h2 className='text-base leading-6'>{date}</h2>
 			</div>
-			<h3 className='text-xs text-highlight'>{enterprice}</h3>
+			<h3 className='text-xs text-highlight'>{enterprice} / {locate}</h3>
 			<ul className='flex flex-col gap-2'>
 				{works.map((x, ix) => <li key={ix} className='tablet:text-base mobile:text-xs'>{x}</li>)}
 			</ul>

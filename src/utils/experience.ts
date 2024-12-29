@@ -1,6 +1,7 @@
 enum Keywords {
   CV_PE = "Consigue Ventas",
   ISIL = "ISIL",
+  TAWA = "Grupo Tawa",
 }
 
 export interface Experience {
@@ -8,14 +9,26 @@ export interface Experience {
   date: string;
   enterprice: string;
   keyword?: Keywords;
+  locate: string;
   works: string[];
 }
 
 export const experiences: Experience[] = [
   {
-    role: "Desarrollador Front End (Remoto)",
+    role: "Practicante - Programador",
+    date: "Mayo 2024 - Actualidad",
+    enterprice: "Grupo Tawa",
+    locate: "Lima, Perú",
+    keyword: Keywords.TAWA,
+    works: [
+      "- Actualmente estoy asignado en el proyecto WorkingDocs, usando NestJs, MongoDB y ReactJS como tecnologias para su desarrollo",
+    ],
+  },
+  {
+    role: "Practicante - Desarrollador Front End",
     date: "Marzo 2023 - Mayo 2023",
-    enterprice: "Consigue Ventas / Lima, Perú",
+    enterprice: "Consigue Ventas",
+    locate: "Lima, Perú",
     keyword: Keywords.CV_PE,
     works: [
       "- Desarrolle pantallas basadas en el diseño, aplicando First Mobile usando React y styled components.",
@@ -28,6 +41,7 @@ export const experiences: Experience[] = [
     role: "Alumno - Desarrollo de Software",
     date: "Abril 2021 - Diciembre 2023",
     enterprice: "Instituto San Ignacio de Loyola",
+    locate: "Lima, Perú",
     keyword: Keywords.ISIL,
     works: [
       "- Durante mi primer año aprendí a como iniciar en el Software, modelar base de datos y hacer páginas web.",

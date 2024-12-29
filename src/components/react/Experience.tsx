@@ -35,20 +35,17 @@ const Experience: React.FC = () => {
         >
           <nav className='text-md border-l border-l-extra' id='nav_experiences'>
             <ul className='flex mobile:flex-col tablet:flex-row desktop:flex-col'>
-              <li
-                className='px-6 py-3 cursor-pointer flex-shrink-0 tablet:w-60 desktop:w-auto active'
-                id={Keywords.CV_PE}
-                onClick={handleClick}
-              >
-                Consigue ventas
-              </li>
-              <li
-                className='px-6 py-3 cursor-pointer flex-shrink-0 tablet:w-60 desktop:w-auto'
-                onClick={handleClick}
-                id={Keywords.ISIL}
-              >
-                ISIL
-              </li>
+              {
+                experiences.map((exp, idx) => (
+                  <li
+                    className={`px-6 py-3 cursor-pointer flex-shrink-0 tablet:w-60 desktop:w-auto ${idx === 0 ? 'active' : ''}`}
+                    onClick={handleClick}
+                    id={exp.keyword}
+                  >
+                    {exp.keyword}
+                  </li>
+                ))
+              }
             </ul>
           </nav>
         </aside>
@@ -64,6 +61,7 @@ const Experience: React.FC = () => {
                 date={x.date}
                 enterprice={x.enterprice}
                 works={x.works}
+                locate={x.locate}
               />
             )
           }
