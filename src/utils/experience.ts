@@ -21,7 +21,10 @@ export const experiences: Experience[] = [
     locate: "Lima, Perú",
     keyword: Keywords.TAWA,
     works: [
-      "- Actualmente estoy asignado en el proyecto WorkingDocs, usando NestJs, MongoDB y ReactJS como tecnologias para su desarrollo",
+      "- Actualmente estoy asignado en el proyecto WorkinDocs, usando NestJS, MongoDB y ReactJS como tecnologias para su desarrollo.",
+      "- Trabajo con analistas de software para mejorar la calidad del código y la experiencia del trabajo.",
+      "- Mejoré mi capacidad para trabajar en equipo y colaborar con otros miembros del equipo.",
+      "- Realizé una serie de tareas de sencillas y básicas hasta integraciones con otros sistemas.",
     ],
   },
   {
